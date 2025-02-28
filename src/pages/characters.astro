@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StarMetalsesh from "../components/StarMetalcharacters.astro";
+const allcharacters = Object.values(
+    import.meta.glob("./characters/*.mdx", { eager: true }),
+);
+const pageTitle = "StarMetal Characters";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+        {
+            allcharacters.map((character: any) => (
+                <StarMetalsesh
+                    url={character.url}
+                    title={character.frontmatter.title}
+                />
+            ))
+        }
+    </ul>
+</BaseLayout>

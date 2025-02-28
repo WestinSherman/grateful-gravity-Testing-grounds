@@ -1,0 +1,185 @@
+@media screen and (max-width: 500px) {
+    /*.content {
+        padding: 20px 40px;
+    }*/
+
+}
+
+/* Reset body margins and set min-height */
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height */
+}
+
+/* NAVBAR START!!! */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 25%);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar li {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*DROPDOWN START*/
+
+/* Make sure the .select behaves like a nav item */
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background: hsl(0, 0%, 25%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    /* Match navbar a */
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+select {
+    background: hsl(0, 0%, 25%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    /* Match navbar a */
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.select-clicked {
+    border: 2px rgb(251, 255, 0) solid;
+    box-shadow: 0 0 0.8em cyan;
+}
+
+.select:hover {
+    background: hsl(0, 0%, 10%);
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 6px solid #fff;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: hsl(0, 0%, 10%);
+    border: 1px rgb(229, 255, 0) solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: rgb(229, 255, 0);
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: hsl(0, 0%, 25%);
+}
+
+.active {
+    background: hsl(0, 0%, 25%);
+}
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
+
+/*DROPDOWN END*/
+
+/*NAVBAR END!!!*/
+
+
+/* Content should expand to push footer down */
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 65ch;
+    margin: auto;
+}
+
+.img {}
+
+/* Sticky footer */
+.footer {
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+/*MARKDOWN START!!!*/
+a {
+    color: #00f2ff;
+}

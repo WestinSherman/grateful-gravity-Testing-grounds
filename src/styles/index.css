@@ -1,0 +1,59 @@
+/* Reset body margins and set min-height */
+body {
+    padding-top: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height */
+    background-image: url("Images/wallpaper.jpg");
+    box-shadow: inset 0 0 20em rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 25%);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar li {
+    float: left;
+}
+
+/* Content should expand to push footer down */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sticky footer */
+.footer {
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+    text-align: center;
+    padding: 0;
+}

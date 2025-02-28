@@ -1,0 +1,22 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/index.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StarMetal TestingGrounds</title>
+    </head>
+    <body>
+        <Navigation />
+        <main class="content">
+            <p>Main content goes here...</p>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

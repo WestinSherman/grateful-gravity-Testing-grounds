@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Session {
+    url: string;
+    frontmatter: {
+        title: string;
+    };
+}
+
+const allseshs: Session[] = Object.values(
+    import.meta.glob<{ url: string; frontmatter: { title: string } }>(
+        "./seshs/*.mdx",
+        { eager: true },
+    ),
+);
+const pageTitle = "StarMetal Sessions";
+---
+
+<nav class="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/seshs/">Seshs</a></li>
+        <li><a href="/characters/">Characters</a></li>
+        <li><a href="/usefulLinks/">Useful Links</a></li>
+        <li>
+            <div class="select">
+                <select onchange="location = this.value">
+                    <option value="" disabled selected>Choose a session</option>
+                    {
+                        allseshs.map((sesh) => (
+                            <option value={sesh.url}>
+                                {sesh.frontmatter.title}
+                            </option>
+                        ))
+                    }
+                </select>
+            </div>
+        </li>
+    </ul>
+</nav>

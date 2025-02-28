@@ -1,0 +1,24 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StarMetal TestingGrounds</title>
+        <script src="../scripts/dropdown.js"></script>
+    </head>
+    <body>
+        <Navigation />
+        <main class="content">
+            <div class="markdown-content">
+                <slot />
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>
