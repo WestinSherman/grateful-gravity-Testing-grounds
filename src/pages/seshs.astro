@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StarMetalsesh from "../components/StarMetalsesh.astro";
+const allseshs = Object.values(
+    import.meta.glob("./seshs/*.mdx", { eager: true }),
+);
+const pageTitle = "StarMetal Sessions";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <ul>
+        {
+            allseshs.map((sesh: any) => (
+                <StarMetalsesh url={sesh.url} title={sesh.frontmatter.title} />
+            ))
+        }
+    </ul>
+</BaseLayout>

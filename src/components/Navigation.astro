@@ -23,19 +23,5 @@ const pageTitle = "StarMetal Sessions";
         <li><a href="/seshs/">Seshs</a></li>
         <li><a href="/characters/">Characters</a></li>
         <li><a href="/usefulLinks/">Useful Links</a></li>
-        <li>
-            <div class="select">
-                <select onchange="location = this.value">
-                    <option value="" disabled selected>Choose a session</option>
-                    {
-                        allseshs.map((sesh) => (
-                            <option value={sesh.url}>
-                                {sesh.frontmatter.title}
-                            </option>
-                        ))
-                    }
-                </select>
-            </div>
-        </li>
     </ul>
 </nav>

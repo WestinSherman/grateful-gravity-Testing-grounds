@@ -1,5 +1,6 @@
 /* Reset body margins and set min-height */
 body {
+    font-family: Arial, sans-serif;
     padding-top: 50px;
     margin: 0;
     display: flex;
